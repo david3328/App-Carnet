@@ -1,0 +1,13 @@
+<div class="evolis" [ngClass]="{'e-primaria': alumno.nivel=='PRIMARIA','e-secundaria': alumno.nivel=='SECUNDARIA'}">
+  <div class="e-codebar" [id]="'code-'+alumno.codigo">
+    {{alumno.codigo | codebar}}
+  </div>
+  <div class="alumno__grado">{{alumno.grado}}</div>
+  <div class="alumno">
+    <div class="alumno__apellidos">{{alumno.apellido}}</div>
+    <div class="alumno__nombre">{{alumno.nombre}}</div>
+    <div class="alumno__foto">
+      <img [src]="'http://192.168.70.2/v4cima/vista/fotosalumno/'+alumno.idpersona+'.jpg'">
+    </div>
+  </div>
+</div>
