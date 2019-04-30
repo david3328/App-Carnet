@@ -1,0 +1,12 @@
+<div class="c-colegio" [ngClass]="{'primero':alumno.grado=='1°','segundo':alumno.grado==='2°'}">
+  <div class="c-codebar" [id]="'code-'+alumno.codigo">
+    {{alumno.codigo | codebar:'14'}}
+  </div>
+  <div class="alumno colegio">
+    <div class="alumno__apellidos">{{alumno.apellido}}</div>
+    <div class="alumno__nombre">{{alumno.nombre}}</div>
+    <div class="alumno__foto colegio">
+      <img [src]="'http://192.168.70.2/v4cima/vista/fotosalumno/'+alumno.idpersona+'.jpg'">
+    </div>
+  </div>
+</div>
