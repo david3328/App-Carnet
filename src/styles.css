@@ -1,1 +1,251 @@
 /* You can add global styles to this file, and also import other style files */
+html,*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.message__notfound{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 2rem;
+  color: #e74c3c;
+}
+.container{padding: 1em}
+.jumbotron{padding: 1em 3em}
+.jumbotron{background: #2365ad;color: #fff;}
+.title{margin:.5em 0;}
+
+ul{list-style: none;margin-top:.8em;width: 100%;text-align: center}
+li{display: inline;margin:0 .8em}
+a{text-decoration: none;color:#fff;display: inline;}
+input[type="text"]{
+  border: none;
+  padding: .6em 1em;
+  border-radius: 25px;
+  font-size:16px;
+  display: inline-block;
+}
+.btn{
+  border: none;
+  display: inline-block;
+  padding: .6em 1em;
+  margin: .3em;
+  border-radius: 15px;
+}
+.btn:focus,input[type="text"]:focus{
+  outline: none;
+}
+.btn:hover{
+  cursor: pointer;
+}
+a.active{
+  font-weight: 900;
+}
+
+/* Carné Evolis */
+.evolis,.c-academia,.c-colegio,.c-inicial{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: .5em;
+}
+.evolis{width: 8.6cm;height: 5.477cm;}
+.c-academia{width: 7.5cm;height: 4.5cm;}
+.c-colegio{width: 8.8cm;height: 9.6cm;}
+.c-inicial{width: 5.477cm; height: 8.6cm;}
+
+.c-academia.default{background-image: url('./assets/carne/270.png')}
+.c-academia.precadete{background-image: url('./assets/carne/274.png')}
+.c-academia.vacacional{background-image: url('./assets/carne/273.png')}
+.e-primaria{background-image: url('./assets/carne/c48.png')}
+.e-secundaria{background-image: url('./assets/carne/c49.png')}
+.c-colegio{background-image: url('./assets/carne/cl-1.png');}
+.c-colegio.segundo{background-image: url('./assets/carne/cl-2.png');}
+.c-inicial.il-5{background-image: url('assets/carne/irfid-5.png');}
+.c-inicial.il-4{background-image: url('assets/carne/irfid-4.png');}
+.c-inicial.il-3{background-image: url('assets/carne/irfid-3.png');}
+
+.alumno__foto{
+  height: 3.14cm;
+  width: 2.45cm;
+  border: 1px solid #009cde;
+  position: absolute;
+  overflow: hidden;
+  top:-3.15em;
+  left: 9.8em;
+}
+.alumno__foto.academia{
+  width: 2.15cm;
+  height: 2.45cm;
+  border: none;
+  top:.62em;
+  left:11.95em;
+}
+.alumno__foto.colegio{
+  width: 3.4cm;
+  height: 4.2cm;
+  top:-13em;
+  left: 2em;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.alumno__foto.inicial{
+  width: 2.35cm;
+  height: 2.85cm;
+  border: 0;
+  border-radius: 5px;
+  top:4.12em;
+  left:3.7em;
+}
+
+.alumno__foto img{
+  height: 100%;
+  width: 100%;
+  /* position: relative; */
+  top:0;
+}
+.alumno__grado{
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top:3.5em;
+  left: .7em;
+}
+.text-ciclo{
+  font-weight: bold;
+  position: absolute;
+  top:1.5em;
+  left:6em;
+  width: 2.4cm;
+  text-align: center;
+  font-size: 14px;
+}
+.text-ciclo.academia{color:red}
+.text-ciclo.precadete{color:#007739}
+
+.alumno{
+  position: absolute;
+  width: 3.7cm;
+  color: #fff;
+  top:3.9em;
+  left:6em;
+  font-size: 14px;
+}
+.alumno.academia{
+  color:#000;
+  font-size: 11px;
+  top:7em;
+  left:3em;
+}
+.alumno.colegio{
+  color: #000;
+  font-size: 14px;
+  width: 4.6cm;
+  text-align: center;
+  top:16.8em;
+  left: 11em;
+}
+.alumno.inicial{
+  color: #000;
+  width: 5.477cm;
+  height: 1cm;
+  overflow: hidden;
+  top:13.5em;
+  left:0;
+  text-align: center;
+}
+
+.alumno__codigo{
+  color:#fff;
+  font-weight: bold;
+  position: absolute;
+  top:7.7em;
+  left:1em;
+  /* background-color:red; */
+}
+
+.alumno__apellidos{font-weight: 700;}
+
+.a-codebar,.e-codebar,.c-codebar,.i-codebar{
+  position: absolute;
+  top:7.2em;
+  left:4.88em;
+  transform: scale(.67,1.3);
+}
+.e-codebar,.c-codebar{
+  background: #fff;
+  transform: scale(.95,1);
+  top: 8.6em;
+  left: 4.5em;
+  padding: 0 !important;
+  padding-top: .2em!important;
+}
+.c-codebar{
+  top:17.5em;
+  left:6.3em;
+  transform: scale(.84,.9);
+  padding-top: .6em!important;
+}
+.i-codebar{
+  transform: scale(.9);
+  top: 14.5em;
+  left: -1.15em;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@media print{
+  .noprint{display:none}
+  .container,.d-flex{ 
+    padding: 0;
+    float: none !important; 
+    position: static !important; 
+    display: inline; 
+    box-sizing: content-box !important;
+  }
+
+  .c-academia,.c-colegio{
+    display: inline-block;
+    margin:2px 4px;    
+  }
+
+  .evolis,.c-inicial{
+    margin: 0!important;
+    overflow: hidden;
+  }  
+}
