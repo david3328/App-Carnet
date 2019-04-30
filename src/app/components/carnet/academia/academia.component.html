@@ -1,0 +1,16 @@
+<div class="c-academia" [ngClass]="{'precadete': alumno.tipo==2,'vacacional':alumno.tipo==3,'default':alumno.tipo==1}">
+  <div class="a-codebar" [id]="'code-'+alumno.codigo">{{alumno.codigo | codebar:'0'}}</div>
+  <div class="text-ciclo" [ngClass]="{'academia':alumno.tipo==1,'precadete':alumno.tipo==2,'vacacional':alumno.tipo==3,'complementario':alumno.ciclo.includes('COMPLEMENTARIO')}">
+    {{alumno.ciclo}}
+  </div>
+  <div class="alumno academia" [ngClass]="{'vacacional': alumno.tipo==3}">
+    <div class="alumno__apellidos">{{alumno.apellido}}</div>
+    <div class="alumno__nombres">{{alumno.nombre}}</div>
+  </div>
+  <div class="alumno__codigo" [ngClass]="{'vacacional': alumno.tipo==3}">
+    0{{alumno.codigo}}
+  </div>
+  <div class="alumno__foto academia">
+    <img [src]="'http://192.168.70.2/v4cima/vista/fotosalumno/'+alumno.idpersona+'.jpg'" >
+  </div>
+</div>
