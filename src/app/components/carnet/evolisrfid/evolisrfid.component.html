@@ -1,0 +1,12 @@
+<div class="c-inicial" [ngClass]="{'il-5' : alumno.grado[0]=='5','il-4' : alumno.grado[0]=='4','il-3' : alumno.grado[0]=='3'}" >
+  <div class="i-codebar" [id]="'code-'+alumno.codigo">
+    {{alumno.codigo | codebar:'12'}}
+  </div>
+  <div class="alumno inicial">
+    <div class="alumno__apellidos">{{alumno.apellido}}</div>
+    <div class="alumno__nombre">{{alumno.nombre}}</div>   
+  </div>
+  <div class="alumno__foto inicial">
+    <img [src]="'http://192.168.70.2/v4cima/vista/fotosalumno/'+alumno.idpersona+'.jpg'">
+  </div>
+</div>
